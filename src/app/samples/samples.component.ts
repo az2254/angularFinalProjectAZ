@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Samples } from './shared/samples';
+import { Samples } from '../shared/samples';
+// import { allSAMPLES } from '../shared/allSamples';
+import { SampleService } from '../services/sample.service';
 
 @Component({
   selector: 'app-samples',
@@ -8,24 +10,18 @@ import { Samples } from './shared/samples';
 })
 export class SamplesComponent implements OnInit {
 
-  samples: Samples[] = [
-    {
-      name: 'Money Laundering' ,
-      image: '/assets/images/sample1.png',
-      category: 'Rise to 360 conversion',
-      description: 'Conversion of Articulate Rise module to 360. Template and interactions creation.',
-    },
-    {
-      name: 'Articulate Simple Game',
-      image: '/assets/images/sample_2.png',
-      category: 'Development of a Game in Articulate Storyline using JavaScript',
-      description: 'Combination of basic JavaScript with Articulate Storyline',
-    }
-  ];
+  // samples = allSAMPLES;
+  samples : Samples[];
+  selectedSamples : Samples ;
 
-  constructor() { }
+  onSelect(sample:Samples) {
+    this.selectedSamples = sample
+  }
+
+  constructor(private sampleService: SampleService) { }
 
   ngOnInit() {
+    this.samples = this.sampleService.getSamples();
   }
 
 }
