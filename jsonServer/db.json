@@ -1,0 +1,82 @@
+{
+  "samples": [
+    {
+      "id": 0,
+      "name": "Money Laundering",
+      "image": "images/sample1.png",
+      "category": "Rise to 360 conversion",
+      "featured": "true",
+      "description": "Conversion of Articulate Rise module to 360. Template and interactions creation.",
+      "comments": [
+            {
+                "author": "John Smith",
+                "comment": "Good Work",
+                "rating": 4,
+                "date": "2012-10-16T17:57:28.556094Z"
+            },
+            {
+                "author": "Anna Dark",
+                "comment": "Perfect",
+                "rating": 5,
+                "date": "2018-03-03T18:25:09.829Z"
+            },
+            {
+                "author": "Alice Coper",
+                "comment": "Too Simple",
+                "rating": 2,
+                "date": "2018-03-03T18:30:55.933Z"
+            },
+            {
+                "author": "Natassa ReZum",
+                "comment": "No comment",
+                "rating": 1,
+                "date": "2018-03-03T18:59:47.274Z"
+            }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Articulate Simple Game",
+      "image": "images/sample_2.png",
+      "category": "Development of a Game in Articulate Storyline using JavaScript",
+      "featured": "false",
+      "description": "Combination of basic JavaScript with Articulate Storyline",
+      "comments": [
+       {
+                "author": "Yiannis Papadopoulos",
+                "comment": "Nice",
+                "rating": 2,
+                "date": "2012-10-16T17:57:28.556094Z"
+              },
+              {
+                "author": "Helen Zisi",
+                "comment": "Perfect",
+                "rating": 5,
+                "date": "2018-03-03T18:25:09.829Z"
+              },
+              {
+                
+                "author": "Vasilis Palis",
+                "comment": "Nice game",
+                "rating": 2,
+                "date": "2018-03-03T18:30:55.933Z"
+              },
+              {
+                "author": "Aliki D.",
+                "comment": "Too short",
+                "rating": 1,
+                "date": "2018-03-03T18:59:47.274Z"
+              }
+      ]
+    }
+    
+  ],
+  "feedback": [
+    {
+      "firstname": "Ana",
+      "lastname": "Smith",
+      "message": "I love your work!",
+      "id": 3
+    }
+  ]
+}

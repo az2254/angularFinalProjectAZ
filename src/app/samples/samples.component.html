@@ -10,7 +10,8 @@
     <!-- navigate to the correct sample -->
     <div class="media" *ngFor="let sample of samples" [routerLink]="['/samples-info', sample.id]">
       <img class=" img-thumbnail align-self-end"
-        src={{sample.image}} alt={{sample.name}}>
+      <!-- take the image from the JSON-server -->
+      src="{{UrlBase + sample.image}}" alt={{sample.name}}>
       <div class="media-body">
         <p class="col d-none d-sm-block">
           {{sample.description }}
