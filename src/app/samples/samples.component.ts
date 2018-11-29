@@ -12,11 +12,11 @@ export class SamplesComponent implements OnInit {
 
   // samples = allSAMPLES;
   samples : Samples[];
-  selectedSamples : Samples ;
+  // selectedSamples : Samples ;
 
-  onSelect(sample:Samples) {
-    this.selectedSamples = sample
-  }
+  // onSelect(sample:Samples) {
+  //   this.selectedSamples = sample
+  // }
 
   constructor(private sampleService: SampleService) { }
 

@@ -7,7 +7,8 @@
  </div>
   <div class="row ">
     <h4 class="col-12">Samples of my Work</h4>
-    <div class="media" *ngFor="let sample of samples" (click) = "onSelect(sample)">
+    <!-- navigate to the correct sample -->
+    <div class="media" *ngFor="let sample of samples" [routerLink]="['/samples-info', sample.id]">
       <img class=" img-thumbnail align-self-end"
         src={{sample.image}} alt={{sample.name}}>
       <div class="media-body">
@@ -18,5 +19,5 @@
     </div>
   </div>
   <!-- <app-samples-info></app-samples-info> -->
-  <app-samples-info [sample] = "selectedSamples"></app-samples-info>
+  <!-- <app-samples-info [sample] = "selectedSamples"></app-samples-info> -->
 </div>

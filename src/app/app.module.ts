@@ -8,13 +8,18 @@ import { SamplesInfoComponent } from './samples-info/samples-info.component';
 
 import { SampleService } from './services/sample.service';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SamplesComponent,
     SamplesInfoComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
