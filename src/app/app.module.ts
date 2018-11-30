@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { urlBase } from './shared/urlBase';
+import { FeedbackComponent } from './feedback/feedback.component';
+
+import { FeedbackService } from './services/feedback.service';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,15 @@ import { urlBase } from './shared/urlBase';
     SamplesInfoComponent,
     FooterComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [SampleService, 
+  providers: [FeedbackService, SampleService, 
     {provide: 'UrlBase', useValue: urlBase}],
   // providers: [SampleService],
   bootstrap: [AppComponent],

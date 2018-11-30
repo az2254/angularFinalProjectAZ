@@ -11,10 +11,10 @@ import { Samples } from '../shared/samples';
 import { HttpClient } from '@angular/common/http';
 import { urlBase } from '../shared/urlBase';
 
-@Injectable({
-  providedIn: 'root'
-})
-
+// @Injectable({
+//   providedIn: 'root'
+// })
+@Injectable()
 // asks JSON data from server and fetches these data using the get() method
 export class SampleService {
 
