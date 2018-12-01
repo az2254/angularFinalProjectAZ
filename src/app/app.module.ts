@@ -17,6 +17,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 
 import { FeedbackService } from './services/feedback.service';
 
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,9 @@ import { FeedbackService } from './services/feedback.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [FeedbackService, SampleService, 
     {provide: 'UrlBase', useValue: urlBase}],

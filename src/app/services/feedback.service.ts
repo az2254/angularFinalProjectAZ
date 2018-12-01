@@ -13,4 +13,9 @@ export class FeedbackService {
   getFeedbacks(): Observable<Feedback[]> {
     return this.http.get<Feedback[]>(urlBase + 'feedback');
 }
+
+// store the feedbk data to the JSON file
+addFeedbacks(feedbk: Feedback): Observable<Feedback[]> {
+  return this.http.post<Feedback[]>(urlBase + 'feedback', feedbk);
+ }
 }
