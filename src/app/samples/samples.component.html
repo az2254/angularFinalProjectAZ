@@ -6,11 +6,11 @@
     </div>
  </div>
   <div class="row ">
-    <h4 class="col-12">Samples of my Work</h4>
+    <h4 class="col-12">Click each Sample to learn more</h4>
     <!-- navigate to the correct sample -->
     <div class="media" *ngFor="let sample of samples" [routerLink]="['/samples-info', sample.id]">
       <!-- take the image from the JSON-server -->
-      <img class=" img-thumbnail align-self-end"
+      <img class=" img-thumbnail align-self-end imgSize"
       src="{{UrlBase + sample.image}}" alt={{sample.name}}>
       <div class="media-body">
         <p class="col d-none d-sm-block">

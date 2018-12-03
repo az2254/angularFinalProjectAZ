@@ -41,6 +41,7 @@
       "category": "Development of a Game in Articulate Storyline using JavaScript",
       "featured": "false",
       "description": "Combination of basic JavaScript with Articulate Storyline",
+      "link": "http://tinyurl.com/y82n29mt",
       "comments": [
         {
           "author": "Yiannis Papadopoulos",
@@ -65,6 +66,40 @@
           "comment": "Too short",
           "rating": 1,
           "date": "2018-03-03T18:59:47.274Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Arithmetic operations",
+      "image": "images/sample3_ex.png",
+      "category": "Introduction to excel using Articulate Storyline",
+      "featured": "false",
+      "description": "An introductory module to excel using simple interactions and video. ",
+      "link": "https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=8db46ce8-6f9a-46f1-a191-950592fd3fd6",
+      "comments": [
+        {
+          "author": "Zenovia A.",
+          "comment": "Good Demo",
+          "rating": 3,
+          "date": "2012-10-16T17:57:28.556094Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Prevention",
+      "image": "images/sample4_prevention.png",
+      "category": "Kids module",
+      "featured": "false",
+      "description": "A module created for elementary school children. The content was given in word document. ",
+      "link": "https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=973e3639-366f-4eb5-b4a4-133d202b7ed1",
+      "comments": [
+        {
+          "author": "Vasilis P.",
+          "comment": "Good Work!",
+          "rating": 5,
+          "date": "2012-10-16T17:57:28.556094Z"
         }
       ]
     }
@@ -105,6 +140,12 @@
       "lastname": "aa",
       "message": "aa",
       "id": 8
+    },
+    {
+      "firstname": "ss",
+      "lastname": "s",
+      "message": "",
+      "id": 9
     }
   ]
 }

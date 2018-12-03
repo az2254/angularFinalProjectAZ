@@ -1,15 +1,13 @@
 <div class="container">
   <!-- <p>Display more info for the Samples</p> -->
-  <div class="row" >
+  <div class="row space" >
     <div class="col-12 col-sm-6" *ngIf="sample">
       <div class="card" >
         <div class="card-body">
           <h5 class="card-title">{{sample.name | uppercase}}</h5>
-          <img class="card-img-top" src="{{UrlBase + sample.image}}" alt={{sample.name}}>
-          <p class="card-text">{{sample.description}}</p>
-          <a href="#" class="card-link btn btn-warning btn-sm">LIKE</a>
-          <a href="#" class="card-link btn btn-warning btn-sm">SHARE</a>
-          <a (click)='goBack()' class="card-link btn btn-primary btn-sm">BACK</a>
+          <a href="{{sample.link }}" target="_blank"><img class="card-img-top" src="{{UrlBase + sample.image}}" alt={{sample.name}}></a>
+          <p class="card-text">{{sample.description}} </p>
+          <a (click)='goBack()' class="card-link btn btn-secondary btn-sm">BACK</a>
         </div>
       </div>
     </div>

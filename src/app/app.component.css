@@ -8,3 +8,11 @@
       background: #8E041B;
       color:floralwhite;
   }
+
+  .nav-item {
+      margin:5px;
+  }
+
+  .fa {
+    color: #8E041B; 
+}
