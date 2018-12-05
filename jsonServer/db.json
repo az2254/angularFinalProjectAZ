@@ -7,6 +7,7 @@
       "category": "Rise to 360 conversion",
       "featured": "true",
       "description": "Conversion of Articulate Rise module to 360. Template and interactions creation.",
+      "link": "https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=9e5b6e6b-0075-4f50-b8ec-a1bc22c8b837",
       "comments": [
         {
           "author": "John Smith",
@@ -116,36 +117,6 @@
       "lastname": "JSON",
       "message": "file",
       "id": 4
-    },
-    {
-      "firstname": "hi",
-      "lastname": "again",
-      "message": "json",
-      "id": 5
-    },
-    {
-      "firstname": "aa",
-      "lastname": "vv",
-      "message": "vv",
-      "id": 6
-    },
-    {
-      "firstname": "ss",
-      "lastname": "ss",
-      "message": "ss",
-      "id": 7
-    },
-    {
-      "firstname": "hello",
-      "lastname": "aa",
-      "message": "aa",
-      "id": 8
-    },
-    {
-      "firstname": "ss",
-      "lastname": "s",
-      "message": "",
-      "id": 9
     }
   ]
 }

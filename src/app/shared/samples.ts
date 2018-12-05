@@ -1,5 +1,5 @@
 import { Comment } from './comment';
-
+// create the Samples class that will define this object 
 export class Samples {
   id: number;
   name: string;
@@ -8,5 +8,4 @@ export class Samples {
   featured: boolean;
   description: string;
   comments: Comment[];
-
-  }
+}

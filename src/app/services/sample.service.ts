@@ -1,12 +1,10 @@
+// import this to be able to create injectable classes
 import { Injectable } from '@angular/core';
-// import these to make use of the observable
+// import these to make use of the observable that are needed for HTTP request
 import { Observable } from 'rxjs';
-// import { of } from 'rxjs';
-// import { delay } from 'rxjs/internal/operators';
-
-
+// use the Samples data
 import { Samples } from '../shared/samples';
-// import { allSAMPLES } from '../shared/allSamples';
+
 
 import { HttpClient } from '@angular/common/http';
 import { urlBase } from '../shared/urlBase';
@@ -15,28 +13,19 @@ import { urlBase } from '../shared/urlBase';
 //   providedIn: 'root'
 // })
 @Injectable()
-// asks JSON data from server and fetches these data using the get() method
+// ask JSON data from server and fetch these data using the get() method
 export class SampleService {
 
   constructor(private http: HttpClient) { }
-
+  // return an observable of Samples array
+  // the data are taken from the JSON server using the http.get method
   getSamples(): Observable<Samples[]> {
     return this.http.get<Samples[]>(urlBase + 'samples');
-    }
+  }
 
-  // // create an observable of Samples [] array 
-  // getSamples(): Observable<Samples[]> {
-  //   return of(allSAMPLES).pipe(delay(2000));
-  // }
-
-  // // return appropiate Samples (using id equal and of the same type )
-  // getSample(id: number): Observable<Samples> {
-  //   // this is an update for this version 
-  //   return of(allSAMPLES.filter((sample) => (sample.id === id))[0]).pipe(delay(2000));
-  // }
-
+  // this is needed for the SPA, when you click on any sample you get its detailed "page"
   getSample(id: number): Observable<Samples> {
     return this.http.get<Samples>(urlBase + 'samples/' + id);
-    }
-  
+  }
+
 }

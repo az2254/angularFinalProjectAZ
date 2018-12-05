@@ -17,32 +17,34 @@ export class FeedbackComponent implements OnInit {
   constructor(private feedBackService: FeedbackService,
     @Inject('UrlBase') public UrlBase,
     // use FormBuilder to create FormControl instances with the appropriate names
-    private feedbkformbuilding: FormBuilder) {this.createForm(); }
+    private feedbkformbuilding: FormBuilder) { this.createForm(); }
 
-    ngOnInit() {
-      this.feedBackService.getFeedbacks().subscribe(feedbacks => this.feedbacks = feedbacks);
-    }
-    // create the form
-    createForm() {
-      this.feedbackForm = this.feedbkformbuilding.group({
+  ngOnInit() {
+    // use this method from feedback.service to return the available feedbacks
+    this.feedBackService.getFeedbacks().subscribe(feedbacks => this.feedbacks = feedbacks);
+  }
+  // create the form
+  createForm() {
+    this.feedbackForm = this.feedbkformbuilding.group({
       firstname: '',
       lastname: '',
       message: ''
-      });
-    }
-    //take the user's input and display it on the page.
-    onSubmitFeedback() {
-      this.feedbk = this.feedbackForm.value;
-      // console.log(this.feedbk);
-      // this.feedbacks.push(this.feedbk);
-      // add new data to the JSON file
-      this.feedBackService.addFeedbacks(this.feedbk).subscribe(feedbk => this.feedbacks.push(this.feedbk));
-      this.feedbackForm.reset({
-        firstname: '',
-        lastname: '',
-        message: ''
-      });
-    }
+    });
+  }
+  //take the user's input and display it on the page.
+  onSubmitFeedback() {
+    // apply the value the user has entered to this.feedbk property
+    this.feedbk = this.feedbackForm.value;
+    // add new data to the JSON file
+    // use push to add the new data
+    this.feedBackService.addFeedbacks(this.feedbk).subscribe(feedbk => this.feedbacks.push(this.feedbk));
+    // reset to initial values
+    this.feedbackForm.reset({
+      firstname: '',
+      lastname: '',
+      message: ''
+    });
+  }
 
 
 

@@ -4,14 +4,15 @@
       <h3>Samples</h3>
       <hr>
     </div>
- </div>
+  </div>
   <div class="row ">
     <h4 class="col-12">Click each Sample to learn more</h4>
     <!-- navigate to the correct sample -->
+    <!-- use *ngFor to iterate over the items -->
     <div class="media" *ngFor="let sample of samples" [routerLink]="['/samples-info', sample.id]">
       <!-- take the image from the JSON-server -->
-      <img class=" img-thumbnail align-self-end imgSize"
-      src="{{UrlBase + sample.image}}" alt={{sample.name}}>
+      <img class=" img-thumbnail align-self-end imgSize" src="{{UrlBase + sample.image}}" alt={{sample.name}}>
+      <!-- display description from JSON -->
       <div class="media-body">
         <p class="col d-none d-sm-block">
           {{sample.description }}
@@ -19,6 +20,4 @@
       </div>
     </div>
   </div>
-  <!-- <app-samples-info></app-samples-info> -->
-  <!-- <app-samples-info [sample] = "selectedSamples"></app-samples-info> -->
 </div>

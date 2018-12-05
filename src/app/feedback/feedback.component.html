@@ -1,56 +1,57 @@
-<div class="container" >
-  <div class="row" >
-    <div class="col-12 col-sm-9" >
-      <div class="card"  >
+<div class="container">
+
+  <div class="row row-content">
+    <div class="col-12 offset-sm-1">
+      <h3>Send us your message</h3>
+      <!-- convert a value into its JSON-format representation. -->
+      <p>{{ feedbackForm.value | json }}</p>
+    </div>
+    <!-- form that will send data to the JSON file -->
+    <div class="col-12 col-md-9 offset-sm-1">
+      <!-- submit the form when clicking the button -->
+      <!-- use formControlName with values that are the same with the ones in feedback.components  -->
+      <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmitFeedback()">
+        <div class="form-group row">
+          <label for="firstname" class="col-md-2 col-form-label">Your First Name</label>
+          <div class="col-md-5">
+            <input type="text" id="firstname" formControlName="firstname" placeholder="Your First Name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lastname" class="col-md-2 col-form-label">Your Last Name</label>
+          <div class="col-md-5">
+            <input type="text" id="lastname" formControlName="lastname" placeholder="Your Last  Name">
+
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="message" class="col-md-2 col-form-label">Your message</label>
+          <div class="col-md-5">
+            <textarea id="message" formControlName="message" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-md-2 col-md-10">
+            <button type="submit" class="btn btn-secondary">Send message</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row row-content">
+    <div class="col-12 col-sm-9">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Feedback</h5>
-          <ul class="list-group list-group-flush"*ngFor="let feedback of feedbacks">
+          <ul class="list-group list-group-flush" *ngFor="let feedback of feedbacks">
             <li class="list-group-item"><b>{{feedback.firstname}}</b> <br>
-              {{feedback.lastname}}  <br>
+              {{feedback.lastname}} <br>
               <span>-- {{feedback.message}}</span>
             </li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-12 offset-sm-1">
-    <h3>Send us your message</h3>
-    <!-- convert a value into its JSON-format representation. -->
-    <p>{{ feedbackForm.value | json }}</p>
- </div>
-  <div class="col-12 col-md-9 offset-sm-1">
-      <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmitFeedback()">
-        <div class="form-group row" >
-            <label for="firstname" class="col-md-2 col-form-label">Your First Name</label>
-            <div class="col-md-5">
-                <input type="text"  id="firstname" formControlName="firstname"
-                placeholder="Your First Name">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="lastname" class="col-md-2 col-form-label">Your Last Name</label>
-            <div class="col-md-5">
-                <input type="text"  id="lastname" formControlName="lastname"
-                placeholder="Your Last  Name" >
-
-            </div>
-        </div>
-         <div class="form-group row">
-            <label for="message" class="col-md-2 col-form-label">Your message</label>
-            <div class="col-md-5">
-                <textarea  id="message" formControlName ="message" rows="3"></textarea>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="offset-md-2 col-md-10">
-                <button type="submit" class="btn btn-secondary">Send message</button>
-            </div>
-        </div>
-    </form>
   </div>
 </div>

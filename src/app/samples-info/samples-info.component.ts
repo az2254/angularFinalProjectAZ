@@ -1,8 +1,8 @@
-import { Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Samples } from '../shared/samples';
 // use that to use snapshot to create a new instance of samples-info
 import { Params, ActivatedRoute } from '@angular/router';
-// use that to enable the use of go back in the previous "page"
+// use that to "hold" current id and thus enable the use of go back in the previous "page"
 import { Location } from '@angular/common';
 import { SampleService } from '../services/sample.service';
 
@@ -13,7 +13,6 @@ import { SampleService } from '../services/sample.service';
   styleUrls: ['./samples-info.component.css']
 })
 export class SamplesInfoComponent implements OnInit {
-  // @Input()
   sample: Samples;
 
   constructor(private sampleService: SampleService,
@@ -24,10 +23,10 @@ export class SamplesInfoComponent implements OnInit {
   ngOnInit() {
     const id = +this.route.snapshot.params['id'];
     // this.sample = this.sampleService.getSample(id);
-    // use the values producted by observables to return the specific sample (using filter from sample.service)
+    // use the values producted by observables to return the specific sample (using getSample from sample.service)
     this.sampleService.getSample(id).subscribe(sample => this.sample = sample);
   }
-
+  // implement "goBack" to go to the previous component
   goBack(): void {
     this.location.back();
   }
