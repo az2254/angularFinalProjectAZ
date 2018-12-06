@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "Money Laundering",
-      "image": "images/sample1.png",
+      "image": "assets/images/sample1.png",
       "category": "Rise to 360 conversion",
       "featured": "true",
       "description": "Conversion of Articulate Rise module to 360. Template and interactions creation.",
@@ -38,7 +38,7 @@
     {
       "id": 1,
       "name": "Articulate Simple Game",
-      "image": "images/sample_2.png",
+      "image": "assets/images/sample_2.png",
       "category": "Development of a Game in Articulate Storyline using JavaScript",
       "featured": "false",
       "description": "Combination of basic JavaScript with Articulate Storyline",
@@ -73,7 +73,7 @@
     {
       "id": 2,
       "name": "Arithmetic operations",
-      "image": "images/sample3_ex.png",
+      "image": "assets/images/sample3_ex.png",
       "category": "Introduction to excel using Articulate Storyline",
       "featured": "false",
       "description": "An introductory module to excel using simple interactions and video. ",
@@ -90,7 +90,7 @@
     {
       "id": 3,
       "name": "Prevention",
-      "image": "images/sample4_prevention.png",
+      "image": "assets/images/sample4_prevention.png",
       "category": "Kids module",
       "featured": "false",
       "description": "A module created for elementary school children. The content was given in word document. ",
@@ -117,6 +117,18 @@
       "lastname": "JSON",
       "message": "file",
       "id": 4
+    },
+    {
+      "firstname": "Anastasia",
+      "lastname": "Zoumpliou",
+      "message": "",
+      "id": 5
+    },
+    {
+      "firstname": "Anastasia",
+      "lastname": "Zoumpliou",
+      "message": "my message",
+      "id": 6
     }
   ]
 }
